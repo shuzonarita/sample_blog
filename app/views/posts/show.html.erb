@@ -1,0 +1,7 @@
+<h2>タイトル</h2>
+<p><%= @post.title %></p>
+<h2>本文</h2>
+<p><%= @post.body %></p>
+<%= link_to "新たに投稿する", new_post_path %>
+<%= link_to "編集", edit_post_path(@post.id), class:"btn edit_btn" %>
+<%= link_to "削除する", destroy_post_path(@post.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
